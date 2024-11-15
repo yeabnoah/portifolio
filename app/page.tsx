@@ -9,14 +9,15 @@ import HomeComponent from "@/components/app/homeComponent";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Home() {
   return (
     <div className=" min-h-screen flex items-center justify-center">
 
-      {/* <ShootingStars /> */}
-      {/* <StarsBackground /> */}
+      {/* <TracingBeam className=""> */}
       <HomeComponent />
+      {/* </TracingBeam> */}
     </div>
   );
 }

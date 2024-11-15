@@ -7,7 +7,7 @@ import { SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb } from "react-icons
 
 export function InfiniteMovingCardsDemo() {
     return (
-        <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <div className=" rounded-md flex flex-col antialiased  bg-transparent dark:bg-transparent dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
             <InfiniteMovingCards
                 items={testimonials}
                 direction="right"

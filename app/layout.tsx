@@ -48,12 +48,15 @@ export default function RootLayout({
           enableSystem={false}
         >
 
-          <div className="flex overflow-x-hidden dark:bg-black bg-white">
-            <div className=" fixed w-[13vw] left-0 top-0 flex justify-end items-end">
-              <NavComponent />
+          <div className="flex dark:bg-black bg-white w-full">
+            <div className=" w-[13vw]">
+              <div className=" fixed left-0 top-0 flex w-[13vw] justify-end items-end">
+                <NavComponent />
+              </div>
+
             </div>
 
-            <div className="  mx-auto ml-[18vw]">
+            <div className=" mx-auto flex-1">
               {children}
             </div>
           </div>

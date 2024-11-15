@@ -10,6 +10,8 @@ import { LinkPreview } from "@/components/ui/link-preview"
 import { TimelineDemo } from "@/components/app/scroll"
 import { InfiniteMovingCardsDemo } from "@/components/app/horizontalScroll"
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal"
+import AboutInfo from "@/components/app/userInfo"
+import { TracingBeam } from "@/components/ui/tracing-beam"
 
 export default function About() {
     const testimonials = [
@@ -54,42 +56,32 @@ export default function About() {
 
     return (
         <div className=" py-12">
-            {/* <div className="flex justify-start"> */}
-            {/* <AnimatedTestimonials testimonials={testimonials} /> */}
-            {/* </div> */}
+            <div className="max-w-5xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+                <h2 className="text-5xl mb-4 text-black dark:text-white max-w-4xl">
+                    Little about my self
+                </h2>
+                <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+                    I&apos;ve been working with computers eversince my childhood. Here&apos;s
+                    a timeline of my journey.
+                </p>
+            </div>
 
-            <AnimatedTestimonials
-                testimonials={testimonials}
-            />
+            <div className=" mx-auto w-full flex">
+                <AboutInfo />
+            </div>
+
+            <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
 
             <div className="mt-12">
                 <InfiniteMovingCardsDemo />
             </div>
 
-            {/* <div className=" mt-20 w-full">
-                <StickyScroll content={content} />
-            </div> */}
+            <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
 
+            <AnimatedTestimonials
+                testimonials={testimonials}
+            />
 
-            {/* <StickyScroll /> */}
-
-            {/* <div className="mt-12 flex justify-center space-x-4">
-                <Button variant="outline" size="icon">
-                    <a href="https://github.com/janedoe" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <Github className="h-5 w-5" />
-                    </a>
-                </Button>
-                <Button variant="outline" size="icon">
-                    <a href="https://linkedin.com/in/janedoe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <Linkedin className="h-5 w-5" />
-                    </a>
-                </Button>
-                <Button variant="outline" size="icon">
-                    <a href="mailto:jane@example.com" aria-label="Email">
-                        <Mail className="h-5 w-5" />
-                    </a>
-                </Button>
-            </div> */}
         </div>
     )
 }
