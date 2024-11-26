@@ -83,11 +83,11 @@ const HomeComponent = () => {
                         </DirectionAwareHover>
                     </section>
 
+                    {/* <hr className="my-2 border-dashed border-foreground/40 dark:border-foreground/20" /> */}
 
+                    <InfiniteMovingCardsDemo />
 
-                    {/* <InfiniteMovingCardsDemo /> */}
-
-                    <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
+                    <hr className="my-2 hidden md:block border-dashed border-foreground/40 dark:border-foreground/20" />
 
                     <section id="projects" className="py-2 px-4 md:px-0">
                         <h2 className="text-xl font-semibold mb-4">Recent Projects</h2>

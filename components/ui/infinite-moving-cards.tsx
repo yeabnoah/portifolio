@@ -68,6 +68,7 @@ export const InfiniteMovingCards = ({
       } else {
         containerRef.current.style.setProperty("--animation-duration", "80s");
       }
+
     }
   };
   return (
@@ -81,22 +82,22 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 md:gap-6 gap-2 items-center py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="w-[150px] max-w-full relative rounded-2xl border border-b-0 border-none flex-shrink-0  px-4 py-6 md:w-[100px]"
+            className="w-full relative rounded-2xl px-2 py-6 md:w-[100px] border border-b-0 border-none flex-grow-0"
             key={item.name}
           >
-            <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-2">
               {React.createElement(item.quote, {
-                className: "w-8 h-8 text-gray-900 dark:text-white"
+                className: "w-6 h-6 text-gray-900 dark:text-white"
               })}
               <div className="text-center">
-                <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{item.name}</p>
+                <p className="text-xs sm:text-sm font-semibold text-gray-900 dark:text-gray-100">{item.name}</p>
               </div>
             </div>
           </li>

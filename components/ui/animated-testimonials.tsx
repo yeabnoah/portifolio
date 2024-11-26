@@ -44,7 +44,7 @@ export const AnimatedTestimonials = ({
   };
   return (
     <div className=" max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 w-full gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
           <div className="relative h-80 w-full md:h-80">
             <AnimatePresence>
@@ -77,22 +77,22 @@ export const AnimatedTestimonials = ({
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom"
+                  className="absolute inset-0 origin-bottom flex items-center justify-center md:justify-start"
                 >
                   <Image
                     src={testimonial.src}
                     alt={testimonial.name}
-                    width={300}
-                    height={300}
+                    width={500}
+                    height={500}
                     draggable={false}
-                    className="h-80 w-80 lg:h-60 lg:w-60 rounded-3xl object-cover object-center"
+                    className="h-60 w-60 md:h-80 md:w-80 lg:h-80 lg:w-80 rounded-3xl object-cover object-center"
                   />
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex justify-between flex-col py-4 ">
+        <div className="flex justify-between flex-col py-4">
           <motion.div
             key={active}
             initial={{

@@ -12,6 +12,8 @@ export function InfiniteMovingCardsDemo() {
                 items={testimonials}
                 direction="right"
                 speed="slow"
+                className="w-full"
+                pauseOnHover={true}
             />
         </div>
     );

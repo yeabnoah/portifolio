@@ -5,37 +5,38 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function AboutInfo() {
     return (
-        <div className="px-6 max-w-6xl mx-auto">
-            <div className="mb-10">
-                <div className="text-sm  prose prose-sm dark:prose-invert flex flex-row gap-10 justify-center">
+        <div className="py-12 px-4 sm:px-6">
+            <div className="max-w-6xl  mx-auto">
+                <div className="bg-background/50 backdrop-blur-xl rounded-2xl p-2 sm:p-4 shadow-lg">
+                    <div className="flex flex-col md:flex-row gap-5 items-center md:items-start">
+                        <div className="flex-shrink-0">
+                            <Image
+                                src={'/telegram.jpg?height=40;width=40'}
+                                alt="Profile picture"
+                                height={280}
+                                width={280}
+                                className="rounded-2xl object-cover shadow-md hover:shadow-xl transition-shadow duration-300 border border-foreground/10"
+                                priority
+                            />
+                        </div>
 
-                    <Image
-                        src={'/telegram.jpg?height=40;width=40'}
-                        alt="blog thumbnail"
-                        height={220}
-                        width={220}
-                        className=" mb-10 object-cover rounded-3xl border-[.03px] border-dashed border-foreground/50 p-3"
-                    />
-
-                    <div className=" max-w-xl">
-                        <p className=" text-sm">
-                            Sit duis est minim proident non nisi velit non consectetur. Esse
-                            adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-                            Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-                            incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-                            fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-                            nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-                            occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-                            officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-                            commodo et labore dolore commodo pariatur.nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-                            occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-                            officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-                            commodo et labore dolore commodo pariatur.
-                        </p>
-
+                        <div className="flex-1 space-y-2">
+                            <p className="text-sm md:text-sm leading-relaxed text-muted-foreground">
+                                Sit duis est minim proident non nisi velit non consectetur. Esse
+                                adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
+                                Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
+                                incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
+                                fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
+                                nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
+                                occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
+                                officia sint labore. Tempor consectetur excepteur ut fugiat veniam
+                                commodo et labore dolore commodo pariatur.nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
+                                occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
+                                officia sint labore. Tempor consectetur excepteur ut fugiat veniam
+                                commodo et labore dolore commodo pariatur.
+                            </p>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
         </div>

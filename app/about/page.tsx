@@ -46,9 +46,9 @@ export default function About() {
 
 
     return (
-        <div className=" py-12 ">
-            <div className="max-w-5xl mx-auto py-20 px-4 md:px-8">
-                <h2 className="text-5xl mb-4 text-black dark:text-white max-w-4xl justify-start">
+        <div className="py-6 md:py-12">
+            <div className="max-w-5xl mx-auto py-5 md:py-14 px-4 md:px-8">
+                <h2 className="text-3xl md:text-5xl mb-4 text-black dark:text-white max-w-4xl justify-start">
                     Little about my self
                 </h2>
                 <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
@@ -57,22 +57,23 @@ export default function About() {
                 </p>
             </div>
 
-            <div className=" mx-auto max-w-5xl flex">
+            <div className="mx-auto max-w-5xl px-4 md:px-8">
                 <AboutInfo />
             </div>
 
-            <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
+            <hr className="mx-4 md:mx-auto md:my-6 border-dashed border-foreground/40 dark:border-foreground/20 max-w-5xl" />
 
-            <div className="mt-12">
+            <div className=" md:mt-12 px-0 md:px-0">
                 <InfiniteMovingCardsDemo />
             </div>
 
-            <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
+            <hr className="mx-4 md:mx-auto md:my-6 border-dashed border-foreground/40 dark:border-foreground/20 max-w-5xl" />
 
-            <AnimatedTestimonials
-                testimonials={testimonials}
-            />
-
+            <div className="px-4 md:px-8">
+                <AnimatedTestimonials
+                    testimonials={testimonials}
+                />
+            </div>
         </div>
     )
 }
