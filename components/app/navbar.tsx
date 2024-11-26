@@ -17,7 +17,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
-export default function NavComponent() {
+export default function NavComponent({ variant = 'desktop' }: { variant?: 'mobile' | 'desktop' }) {
 
     const [mounted, setMounted] = useState(false);
 
@@ -69,14 +69,45 @@ export default function NavComponent() {
         }
     ];
 
-
+    if (variant === 'mobile') {
+        return (
+            <nav className="w-full bg-white/80 dark:bg-black/80 backdrop-blur-sm border-t border-foreground/10">
+                <div className="flex justify-around items-center py-3 px-4">
+                    {links.map((item) => (
+                        <Link
+                            key={item.title}
+                            href={item.href}
+                            className="flex flex-col items-center gap-1"
+                        >
+                            <div className="h-6 w-6 flex items-center justify-center">
+                                {item.icon}
+                            </div>
+                            <span className="text-xs text-foreground/80">
+                                {item.title}
+                            </span>
+                        </Link>
+                    ))}
+                </div>
+            </nav>
+        );
+    }
 
     return (
-        <nav className="flex items-center justify-center flex-1  h-screen w-16 py-4 border-r border-dashed border-foreground/40 dark:border-foreground/20 ">
-            <FloatingDock
-                mobileClassName="translate-y-20"
-                items={links}
-            />
+        <nav className="flex flex-col items-center gap-8 py-4 px-2 rounded-full backdrop-blur-sm">
+            {links.map((item) => (
+                <Link
+                    key={item.title}
+                    href={item.href}
+                    className="flex flex-col items-center gap-1 text-foreground/60 hover:text-foreground transition-colors"
+                >
+                    <div className="h-6 w-6 flex items-center justify-center">
+                        {item.icon}
+                    </div>
+                    <span className="text-[10px]">
+                        {item.title}
+                    </span>
+                </Link>
+            ))}
         </nav>
     )
 }

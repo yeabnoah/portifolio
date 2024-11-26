@@ -5,19 +5,19 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function AboutInfo() {
     return (
-        <div className="px-6 w-full">
+        <div className="px-6 max-w-6xl mx-auto">
             <div className="mb-10">
                 <div className="text-sm  prose prose-sm dark:prose-invert flex flex-row gap-10 justify-center">
 
                     <Image
                         src={'/telegram.jpg?height=40;width=40'}
                         alt="blog thumbnail"
-                        height={250}
-                        width={255}
+                        height={220}
+                        width={220}
                         className=" mb-10 object-cover rounded-3xl border-[.03px] border-dashed border-foreground/50 p-3"
                     />
 
-                    <div>
+                    <div className=" max-w-xl">
                         <p className=" text-sm">
                             Sit duis est minim proident non nisi velit non consectetur. Esse
                             adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
@@ -27,19 +27,10 @@ export default function AboutInfo() {
                             nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
                             occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
                             officia sint labore. Tempor consectetur excepteur ut fugiat veniam
+                            commodo et labore dolore commodo pariatur.nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
+                            occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
+                            officia sint labore. Tempor consectetur excepteur ut fugiat veniam
                             commodo et labore dolore commodo pariatur.
-                        </p>
-                        <p className=" text-sm mt-5">
-                            Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-                            veniam in commodo id reprehenderit adipisicing. Proident duis
-                            exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-                        </p>
-                        <p className=" text-sm mt-5">
-                            Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-                            reprehenderit deserunt amet laborum consequat adipisicing officia qui
-                            irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-                            Amet culpa officia aliquip deserunt veniam deserunt officia
-                            adipisicing aliquip proident officia sunt.
                         </p>
 
                     </div>

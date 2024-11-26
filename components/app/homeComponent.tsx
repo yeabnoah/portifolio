@@ -27,10 +27,10 @@ const HomeComponent = () => {
     }, []);
 
     return (
-        <div className="min-h-screen text-foreground">
-            <main className="container max-w-7xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="min-h-[85vh] ">
-                    <section className="pt-6 sm:pt-10">
+        <div className="min-h-screen text-foreground overflow-x-hidden">
+            <main className="container max-w-full md:max-w-7xl xl:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div className="min-h-[85vh] flex-1 w-full">
+                    <section className="pt-6 sm:pt-10 hidden md:block">
 
                         {mounted && (
                             <GitHubCalendar
@@ -45,21 +45,21 @@ const HomeComponent = () => {
 
                     </section>
 
-                    <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
+                    <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20 hidden md:block" />
 
 
-                    <section id="about" className="flex flex-col-reverse md:flex-row items-center justify-between mr-[5rem] py-8 gap-6 md:gap-8">
-                        <div className="w-full md:w-1/2 space-y-4 shrink-0">
+                    <section id="about" className="flex justify-center flex-col-reverse md:flex-row items-center md:justify-between md:mr-[5rem] py-8 gap-6 md:gap-8">
+                        <div className="w-full md:w-1/2 space-y-4 shrink-0 px-4 md:px-0">
                             <div>
-                                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+                                <h1 className="text-2xl md:text-start text-center sm:text-3xl lg:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
                                     Hi, I'm Yeabsra Ashebir a <br /><Cover className='text-teal-500'>Full-Stack</Cover> Developer
                                 </h1>
-                                <p className="text-sm sm:text-base text-foreground dark:text-foreground/80 mt-3">
+                                <p className="text-sm text-center md:text-start sm:text-base text-foreground dark:text-foreground/80 mt-3">
                                     I create full-stack products that people love, with a focus on user experience and scalable architecture.
                                 </p>
                             </div>
 
-                            <div className="flex gap-4 sm:gap-6">
+                            <div className="flex justify-center md:justify-normal gap-4 sm:gap-6">
                                 <Link href="#" className="text-foreground dark:text-foreground/80 hover:text-teal-500 hover:scale-125 hover:rotate-6 transition-colors">
                                     <IconBrandGithub className="h-10 w-10" />
                                     <span className="sr-only">GitHub</span>
@@ -78,25 +78,25 @@ const HomeComponent = () => {
                                 </Link>
                             </div>
                         </div>
-                        <DirectionAwareHover className=' w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64' imageUrl={'/telegram.jpg?height=400&width=700'}>
-                            <p className="font-bold text-xl">Click for Details</p>
+                        <DirectionAwareHover className='w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64' imageUrl={'/telegram.jpg?height=400&width=700'}>
+                            <p className="font-bold text-lg md:text-xl">Full Stack Dev</p>
                         </DirectionAwareHover>
                     </section>
 
 
 
-                    <InfiniteMovingCardsDemo />
+                    {/* <InfiniteMovingCardsDemo /> */}
 
                     <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
 
-                    <section id="projects" className="py-2">
-                        <h2 className="text-xl font-semibold -mb-10">Recent Projects</h2>
-                        <div className=" flex flex-wrap gap-5">
+                    <section id="projects" className="py-2 px-4 md:px-0">
+                        <h2 className="text-xl font-semibold mb-4">Recent Projects</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                             <ThreeDCardDemo />
                             <ThreeDCardDemo />
                             <ThreeDCardDemo />
                         </div>
-                        <div className=" -mt-10">
+                        <div className="mt-6 flex justify-start">
                             <Button variant="outline" className="dark:bg-background rounded-md bg-foreground/90 hover:bg-foreground/85 border-none text-xs text-white transition-colors">
                                 View All Projects
                                 <ExternalLink className="ml-2 h-4 w-4" />
@@ -106,15 +106,15 @@ const HomeComponent = () => {
 
                     <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
 
-                    <section id="articles" className=" py-3">
-                        <h2 className="text-2xl font-semibold -mb-12">Recent Articles</h2>
-                        <div className=" flex flex-wrap gap-5">
+                    <section id="articles" className="py-3 px-4 md:px-0">
+                        <h2 className="text-2xl font-semibold mb-4">Recent Articles</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                             <ArticleCard />
                             <ArticleCard />
                             <ArticleCard />
                         </div>
-                        <div className=" -mt-10">
-                            <Button variant="outline" className=" dark:bg-background rounded-md bg-foreground/90 hover:bg-foreground/85 text-xs border-none text-white transition-colors">
+                        <div className="mt-6">
+                            <Button variant="outline" className="dark:bg-background rounded-md bg-foreground/90 hover:bg-foreground/85 text-xs border-none text-white transition-colors">
                                 View All Articles
                                 <ExternalLink className="ml-2 h-4 w-4" />
                             </Button>

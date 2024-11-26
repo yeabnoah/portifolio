@@ -43,10 +43,10 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm md:max-w-6xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 w-full gap-10">
+    <div className=" max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 w-full gap-5">
         <div>
-          <div className="relative h-80 w-full md:h-96">
+          <div className="relative h-80 w-full md:h-80">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -85,7 +85,7 @@ export const AnimatedTestimonials = ({
                     width={300}
                     height={300}
                     draggable={false}
-                    className="h-96 w-96 rounded-3xl object-cover object-center"
+                    className="h-80 w-80 lg:h-60 lg:w-60 rounded-3xl object-cover object-center"
                   />
                 </motion.div>
               ))}
@@ -117,33 +117,15 @@ export const AnimatedTestimonials = ({
             </h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing.
             </p>
-            <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
-              {testimonials[active].quote.split(" ").map((word, index) => (
-                <motion.span
-                  key={index}
-                  initial={{
-                    filter: "blur(10px)",
-                    opacity: 0,
-                    y: 5,
-                  }}
-                  animate={{
-                    filter: "blur(0px)",
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                    ease: "easeInOut",
-                    delay: 0.02 * index,
-                  }}
-                  className="inline-block"
-                >
-                  {word}&nbsp;
-                </motion.span>
-              ))}
-            </motion.p>
+            <hr className="my-6 border-dashed border-foreground/40 dark:border-foreground/20" />
+            <p className="text-sm text-gray-500 dark:text-neutral-500">
+              {testimonials[active].name as string}
+            </p>
+            <p className="text-sm text-gray-500 dark:text-neutral-500">
+              {testimonials[active].designation}
+            </p>
           </motion.div>
           <div className="flex gap-4 mt-5">
             <button
