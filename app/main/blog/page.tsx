@@ -1,6 +1,6 @@
 import ExpandableCardDemo from '@/components/app/blogMain'
 import React from 'react'
-import ArticleCard from "../../components/reuseble/articleCard";
+import ArticleCard from "@/components/reuseble/articleCard";
 
 const Blog = () => {
     return (
